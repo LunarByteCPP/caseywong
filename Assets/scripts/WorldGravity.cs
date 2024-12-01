@@ -21,7 +21,6 @@ public class WorldGravity : MonoBehaviour
     public GameObject center;
 
     public float gravityConstant;
-    public GameObject debugCube;
 
     Rigidbody rb;
 

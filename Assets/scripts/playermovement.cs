@@ -292,8 +292,6 @@ public class playermovement : MonoBehaviour
             rb.AddForce(movedirection.normalized * movespeed * 10f * airmultiplier, ForceMode.Force);
         }
 
-        //turn gravity off while on slope
-        // rb.useGravity = !onslope();
 
     }
     private void SpeedControl()
@@ -323,7 +321,7 @@ public class playermovement : MonoBehaviour
     {
         exitingslope = true;
         //reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        // rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(gameobj.transform.up * jumpforce, ForceMode.Impulse);
     }
