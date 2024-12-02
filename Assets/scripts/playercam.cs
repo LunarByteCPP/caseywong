@@ -36,12 +36,12 @@ public class playercam : MonoBehaviour
 
         xRotation -= mouseY;
         //make sure the camera doesn't go out of bounds
-        // xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         transform.rotation = rigidBodyTransform.rotation * Quaternion.Euler(xRotation, yRotation, 0);
         // orientation.rotation = Quaternion.AngleAxis(xRotation, worldGravity.GetWorldUp());
         // transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         // orientation = Quaternion.LookRotation(yRotation, orientation.up);
         // orientation.rotation *= Quaternion.Euler(0, yRotation, 0);
-        orientation.rotation = transform.rotation;
+        orientation.rotation = rigidBodyTransform.rotation * Quaternion.Euler(0, yRotation, 0);
     }
 }

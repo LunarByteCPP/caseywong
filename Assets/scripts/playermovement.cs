@@ -272,15 +272,15 @@ public class playermovement : MonoBehaviour
 
 
         // on slope
-        if (onslope() && !exitingslope)
-        {
-            grounded = true;
-            rb.AddForce(getslopemovedirection(movedirection) * movespeed * 20f, ForceMode.Force);
-            if (rb.velocity.y > 0)
-            {
-                rb.AddForce(-transform.up * 80f, ForceMode.Force);
-            }
-        }
+        // if (onslope() && !exitingslope)
+        // {
+        //     grounded = true;
+        //     rb.AddForce(getslopemovedirection(movedirection) * movespeed * 20f, ForceMode.Force);
+        //     if (rb.velocity.y > 0)
+        //     {
+        //         rb.AddForce(-transform.up * 80f, ForceMode.Force);
+        //     }
+        // }
 
         // on ground
         else if (grounded)
